@@ -1,6 +1,12 @@
 # India Post Consignment Tracker API
 
-[![](https://images.microbadger.com/badges/commit/RohithCIS/consignment-tracker.svg)](https://microbadger.com/images/RohithCIS/consignment-tracker) [![License: WTFPL](https://img.shields.io/badge/license-WTFPL-blue)](http://www.wtfpl.net/)
+
+[![Selenium](https://img.shields.io/github/package-json/dependency-version/RohithCIS/consignment-tracker/selenium-webdriver)]()
+[![License: WTFPL](https://img.shields.io/badge/license-WTFPL-blue)](http://www.wtfpl.net/)
+[![Contributors](https://img.shields.io/github/contributors/RohithCIS/consignment-tracker)]()
+[![Last Commit](https://img.shields.io/github/last-commit/RohithCIS/consignment-tracker)]()
+[![Last Commit](https://img.shields.io/badge/PRs-welcome-brightgreen)]()
+[![Last Commit](https://img.shields.io/github/forks/RohithCIS/consignment-tracker?label=forks)]()
 
 ### Description
 Scrapes the Courier Sites to obtain consignment tracking data.
