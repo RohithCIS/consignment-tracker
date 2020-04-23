@@ -1,6 +1,4 @@
-module.exports = function solveCaptcha(challenge, problem) {    
-    console.log(challenge);
-    console.log(problem);
+function solveIndiaPostCaptcha(challenge, problem) {
 
     let solved;
     switch (challenge) {
@@ -43,4 +41,8 @@ module.exports = function solveCaptcha(challenge, problem) {
             break;
     }
     return solved;
+}
+
+module.exports = {
+    solveIndiaPostCaptcha
 }

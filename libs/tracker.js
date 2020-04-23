@@ -2,7 +2,7 @@ const { Builder, By, Key, until } = require("selenium-webdriver");
 const chrome = require('selenium-webdriver/chrome');
 const firefox = require('selenium-webdriver/firefox');
 
-const solveCaptcha = require('./captcha')
+const solver = require('./captcha')
 
 const screen = {
     width: 1366,
@@ -30,7 +30,7 @@ async function indiapost(id) {
         const challenge = await driver.findElement({ id: 'ctl00_PlaceHolderMain_ucNewLegacyControl_ucCaptcha1_lblCaptcha' }).getAttribute('textContent');
         const problem = await captcha[0].findElement(By.tagName('span')).getAttribute('textContent');
 
-        const solution = solveCaptcha(challenge, problem);
+        const solution = solver.solveIndiaPostCaptcha(challenge, problem);
 
         await driver.findElement({ id: "ctl00_PlaceHolderMain_ucNewLegacyControl_txtOrignlPgTranNo" }).sendKeys(id);
         await driver.findElement({ id: "ctl00_PlaceHolderMain_ucNewLegacyControl_ucCaptcha1_txtCaptcha" }).sendKeys(solution.toString());
@@ -118,7 +118,5 @@ async function indiapost(id) {
 }
 
 module.exports = {
-    indiapost: (id) => {
-        return indiapost(id);
-    }
+    indiapost
 }

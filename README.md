@@ -12,16 +12,21 @@
 Scrapes the Courier Sites to obtain consignment tracking data.
 
 - Unofficial
-- JSON API
+- RESTful JSON API
 - No Captcha
 
 ### Supports
 
 Supports only India Post Currently
 
-### Sample Output
+### Usage
+
+- `npm install` to install dependencies
+- `npm run dev` to start server
 
 ```json
+// GET http://localhost:3000/track/indiapost/:id
+
 {
   "id": "ET169145475IN",
   "bookedAt": "Sholingur SO",
@@ -47,7 +52,6 @@ Supports only India Post Currently
 ```
 
 ### To Do
-- Express Server for API EndPoints
 - Captcha Solver fails occasionally - Fix it
 - Dockerise
 
