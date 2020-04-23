@@ -15,24 +15,24 @@ Supports only India Post Currently
 
 ```json
 {
-  id: 'ET169145475IN',
-  bookedAt: 'Sholingur SO',
-  bookedOn: '2020-04-20T11:02:16',
-  destinationPin: '631003',
-  tariff: '76.70',
-  articleType: 'Inland Speed Post',
-  destination: 'Jothinagar SO',
-  status: 'Item Bagged ',
-  events: [
+  "id": "ET169145475IN",
+  "bookedAt": "Sholingur SO",
+  "bookedOn": "2020-04-20T11:02:16",
+  "destinationPin": "631003",
+  "tariff": "76.70",
+  "articleType": "Inland Speed Post",
+  "destination": "Jothinagar SO",
+  "status": "Item Bagged ",
+  "events": [
     {
-      timestamp: '2020-04-20T14:29:42',
-      location: 'Sholingur SO',
-      event: 'Item Bagged '
+      "timestamp": "2020-04-20T14:29:42",
+      "location": "Sholingur SO",
+      "event": "Item Bagged "
     },
     {
-      timestamp: '2020-04-20T11:02:16',
-      location: 'Sholingur SO',
-      event: 'Item Booked '
+      "timestamp": "2020-04-20T11:02:16",
+      "location": "Sholingur SO",
+      "event": "Item Booked "
     }
   ]
 }
