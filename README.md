@@ -1,23 +1,20 @@
-# India Post Consignment Tracker API
+# Courier Consignment Tracker API
 
-
-[![Selenium](https://img.shields.io/github/package-json/dependency-version/RohithCIS/consignment-tracker/selenium-webdriver)]()
 [![License: WTFPL](https://img.shields.io/badge/license-WTFPL-blue)](http://www.wtfpl.net/)
 [![Contributors](https://img.shields.io/github/contributors/RohithCIS/consignment-tracker)]()
 [![Last Commit](https://img.shields.io/github/last-commit/RohithCIS/consignment-tracker)]()
-[![Last Commit](https://img.shields.io/badge/PRs-welcome-brightgreen)]()
-[![Last Commit](https://img.shields.io/github/forks/RohithCIS/consignment-tracker?label=forks)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)]()
+[![Forks](https://img.shields.io/github/forks/RohithCIS/consignment-tracker?label=forks)]()
 
 ### Description
 Scrapes the Courier Sites to obtain consignment tracking data.
 
 - Unofficial
 - RESTful JSON API
-- No Captcha
 
 ### Supports
 
-Supports only India Post Currently
+- The Professional Couriers
 
 ### Usage
 
@@ -25,35 +22,46 @@ Supports only India Post Currently
 - `npm run dev` to start server
 
 ```json
-// GET http://localhost:3000/track/indiapost/:id
+// GET http://localhost:3000/track/:courier/:id
 
 {
-  "id": "ET169145475IN",
-  "bookedAt": "Sholingur SO",
-  "bookedOn": "2020-04-20T11:02:16",
-  "destinationPin": "631003",
-  "tariff": "76.70",
-  "articleType": "Inland Speed Post",
-  "destination": "Jothinagar SO",
-  "status": "Item Bagged ",
-  "events": [
-    {
-      "timestamp": "2020-04-20T14:29:42",
-      "location": "Sholingur SO",
-      "event": "Item Bagged "
-    },
-    {
-      "timestamp": "2020-04-20T11:02:16",
-      "location": "Sholingur SO",
-      "event": "Item Booked "
-    }
-  ]
+    "status": "In Transit",
+    "trackingNumber": "AKM1031506",
+    "courier": "The Professional Couriers",
+    "activities": [
+        {
+            "timestamp": "09-01-2021 13:00:47",
+            "place": "Tirunelveli",
+            "forwardingNumber": "DTVL612134",
+            "activity": "Out for Delivery - Area : PPMA"
+        },
+        {
+            "timestamp": "09-01-2021 13:00:47",
+            "place": "Tirunelveli",
+            "forwardingNumber": "DTVLDTVL6121340",
+            "activity": "Out for Delivery - Area : Tirunelveli"
+        },
+        {
+            "timestamp": "09-01-2021 10:13:52",
+            "place": "Tirunelveli",
+            "forwardingNumber": "MMAKM704949",
+            "activity": "Received at Tirunelveli"
+        },
+        {
+            "timestamp": "09-01-2021 10:13:52",
+            "place": "Tirunelveli",
+            "forwardingNumber": "MTVL704949     ",
+            "activity": "Received at Tirunelveli"
+        },
+        {
+            "timestamp": "08-01-2021 20:01:00",
+            "place": "Tirunelveli",
+            "forwardingNumber": "MAKM704949",
+            "activity": "Despatched to Tirunelveli"
+        }
+    ]
 }
 ```
-
-### To Do
-- Captcha Solver fails occasionally - Fix it
-- Dockerise
 
 ### License
 
