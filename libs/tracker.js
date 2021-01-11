@@ -21,6 +21,14 @@ async function tpcindia(cno) {
     return tracking;
 }
 
+async function dtdc(cno) {
+    const res = await axios.get(`https://tracking.dtdc.com/ctbs-tracking/customerInterface.tr?submitName=getLoadMovementDetails&cnNo=${cno}`);
+    let data = res.data;
+    let tracking = { trackingNumber: cno, courier: 'DTDC', status: data[0].latestStatus, activities: data };
+    return tracking;
+}
+
 module.exports = {
-    tpcindia
+    tpcindia,
+    dtdc
 }

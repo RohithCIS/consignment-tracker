@@ -15,6 +15,7 @@ Scrapes the Courier Sites to obtain consignment tracking data.
 ### Supports
 
 - The Professional Couriers
+- DTDC
 
 ### Usage
 

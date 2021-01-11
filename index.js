@@ -12,9 +12,12 @@ app.get('/track/:courier/:id', async (req, res) => {
         if (req.params.courier == 'tpcindia') {
             const data = await tracker.tpcindia(req.params.id);
             res.json(data);
+        } else if (req.params.courier == 'dtdc') {
+            const data = await tracker.dtdc(req.params.id);
+            res.json(data);
         }
     } catch (error) {
-        res.json(error);
+        res.send(error);
     }
 });
 
